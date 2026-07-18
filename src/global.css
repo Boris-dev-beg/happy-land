@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Playfair";
+  src: url("./font/PlayfairDisplay.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@theme {
+  /* ! --- COULEURS --- */
+  /* ? Couleur principale (Boutons, textes en surbrillance, icônes) */
+  --color-brand-gold: #d69e2e; /* ? Ajuste avec la pipette si besoin, ex: #D4AF37 */
+  --color-brand-gold-hover: #b7791f;
+
+  /* ? Couleurs de fond sombres (Header, Footer, Section Hero) */
+  --color-brand-dark: #111827; /* ? Gris très sombre / Noir doux */
+  --color-brand-darker: #0f172a;
+
+  /* ? Couleur secondaire (Boutons "En savoir plus", "Voir le menu complet") */
+  --color-brand-green: #1e4e3d; /* ? Vert sapin profond */
+  --color-brand-green-hover: #15372b;
+
+  /* ? Fonds clairs (Sections "Pourquoi nous choisir", "Nos spécialités") */
+  --color-bg-light: #f9fafb;
+  --color-bg-white: #ffffff;
+
+  /* ? Textes */
+  --color-text-main: #374151; /* ? Gris foncé pour les paragraphes */
+  --color-text-title: #111827; /* ? Presque noir pour les gros titres */
+
+  /* ! --- TYPOGRAPHIE --- */
+  /* ? Titres (Polices avec empattement/Serif pour l'élégance) */
+  --font-serif: "Playfair", ui-serif, Georgia, serif;
+
+  /* ? Textes courants (Polices sans empattement/Sans-serif pour la lisibilité) */
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
