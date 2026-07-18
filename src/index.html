@@ -4,12 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Happy Land</title>
+    <link rel="stylesheet" href="../node_modules/@flaticon/flaticon-uicons/css/regular/rounded.css">
     <link rel="stylesheet" href="./output.css" />
   </head>
-  <body class="max-w-screen w-screen bg-brand-green">
+  <body class="max-w-screen w-screen bg-brand-olive">
     <!-- ! HEADER -->
     <header
-      class="w-full h-27 bg-transparent backdrop-blur-md justify-center items-center border-b border-brand-darker font-semibold"
+      class="w-full h-27 bg-transparent backdrop-blur-md justify-center items-center font-semibold"
     >
       <div class="section-container flex items-center justify-between">
         <!-- ? LOGO -->
@@ -30,7 +31,7 @@
         </div>
         <!-- ? LINKS -->
         <nav
-          class="*:capitalize *:hover:text-brand-gold-hover py-4 *:hover:border-b *:hover:border-brand-gold-hover *:[&.active]:text-brand-gold *:[&.active]:border-brand-gold *:[&.active]:border-b text-white flex items-center justify-center gap-5 font-sans *:transition-colors *:duration-300 *:py-3 *:w-18 *:text-center"
+          class="*:capitalize *:hover:text-brand-gold-hover py-4 *:hover:border-b *:hover:border-brand-gold-hover *:[&.active]:text-brand-gold *:[&.active]:border-brand-gold *:[&.active]:border-b text-white hidden md:flex items-center justify-center gap-5 font-sans *:transition-colors *:duration-300 *:py-3 *:w-18 *:text-center "
         >
           <a href="#hero" class="active">Accueil</a>
           <a href="#menu" class="">Menu</a>
@@ -39,8 +40,12 @@
           <a href="#about" class="">à propos</a>
           <a href="#contact" class="">Contact</a>
         </nav>
+        <!-- ? Menu Burger -->
+        <span class="md:hidden">
+          <i class="fi fi-rr-menu-burger text-white text-2xl"></i>
+        </span>
         <!-- ? CTA BUTTON -->
-        <button class="btn-primary text-brand-olive">Réserver une table</button>
+        <button class="btn-primary text-brand-olive hidden lg:flex">Réserver une table</button>
       </div>
     </header>
     <!-- ! HEADER -->
