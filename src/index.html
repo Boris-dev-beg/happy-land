@@ -4,17 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Happy Land</title>
+    <!-- ? icons: regulars -->
     <link
       rel="stylesheet"
       href="../node_modules/@flaticon/flaticon-uicons/css/regular/rounded.css"
     />
+    <!-- ? icons: solid -->
     <link
       rel="stylesheet"
       href="../node_modules/@flaticon/flaticon-uicons/css/solid/all.css"
     />
+    <!-- ? icons: brands (whatsapp, etc) -->
+    <link
+      rel="stylesheet"
+      href="../node_modules/@flaticon/flaticon-uicons/css/brands/all.css"
+    />
     <link rel="stylesheet" href="./output.css" />
   </head>
-  <body class="max-w-screen w-screen bg-brand-olive">
+  <body class="max-w-screen w-full bg-brand-olive">
     <!-- ! HEADER -->
     <header
       class="w-full sticky top-0 z-20 bg-black/70 backdrop-blur-xl border-b border-white/10"
@@ -98,7 +105,9 @@
               <i class="fi fi-rr-star"></i>
               Saveurs authentiques
             </span>
-            <h1 class="title text-4xl text-white font-semibold leading-tight">
+            <h1
+              class="title text-start text-4xl text-white font-semibold leading-tight"
+            >
               Découvrez les saveurs qui
               <span class="font-normal text-brand-gold">rassemblent</span>
             </h1>
@@ -349,7 +358,7 @@
         </div>
       </section>
       <!-- ! PRODUCTS Section -->
-      <!-- ! PRODUCTS Section -->
+      <!-- ! GALLERY Section -->
       <section id="gallery" class="bg-bg-white/90 w-full py-8">
         <div class="section-container flex flex-col gap-4 items-center">
           <!-- ? Section Header -->
@@ -381,17 +390,68 @@
               </button>
             </span>
 
-            <!-- ? Images Grid (fill with TypeScript) -->
+            <!-- ? Images Grid (Fill with TypeScript) -->
             <div
               id="gallery-grid"
-              class="grid grid-rows-1 grid-cols-1 md:grid-cols-2 lg:e w-full py-8"grid-cols-5 gap-6 w-full relative"
+              class="grid grid-rows-1 grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 w-full relative"
             >
-            <!-- ? Images -->
-          </div>
+              <!-- ? Images -->
+            </div>
           </div>
         </div>
       </section>
-      <!-- ! PRODUCTS Section -->
+      <!-- ! GALLERY Section -->
+
+      <!-- ! Contact Section -->
+      <section id="contact" class="section-light w-full py-16">
+        <div class="section-container">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+            <!-- ? Contact info -->
+            <div class="flex flex-col w-full p-4">
+              <span class="uppercase text-sm text-brand-gold tracking-[0.2em]"
+                >Contactez</span
+              >
+              <p class="title text-start">Entrons en contact</p>
+              <div class="flex flex-col gap-3 mt-6">
+                <div class="flex items-start gap-3">
+                  <i class="fi fi-sr-marker text-2xl"></i>
+                  <p class="paragraph font-semibold capitalize">Boulevard êvéché, Bafoussam</p>
+                </div>
+                <div class="flex items-start gap-3">
+                  <i class="fi fi-rr-phone-flip text-2xl"></i>
+                  <p class="paragraph font-semibold">+237 694 82 73 26</p>
+                </div>
+                <div class="flex items-start gap-3">
+                  <i class="fi fi-brands-whatsapp text-2xl"></i>
+                  <p class="paragraph font-semibold">WhatsApp: +237 694 82 73 26</p>
+                </div>
+                <div class="flex items-start gap-3">
+                  <i class="fi fi-rr-envelope text-2xl"></i>
+                  <p class="paragraph font-semibold">contact@happyland.cm</p>
+                </div>
+                <div class="flex items-start gap-3">
+                  <i class="fi fi-rr-clock text-2xl"></i>
+                  <p class="paragraph font-semibold">Ouvert 24h/24 - 7j/7</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- ? Image -->
+            <div class="relative rounded-3xl h-115 overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15886.487190194975!2d10.4367916!3d5.4741976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x105f9be8448bf8bf%3A0xefc65b9a49360b42!2sHappy%20Land!5e0!3m2!1sen!2scm!4v1784456725983!5m2!1sen!2scm"
+                width="800"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                class="w-full"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <!-- ! BODY -->
     <script src="./index.js"></script>
