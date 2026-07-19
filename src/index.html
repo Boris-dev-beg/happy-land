@@ -46,7 +46,7 @@
           <a href="#hero" class="active">Accueil</a>
           <a href="#menu">Menu</a>
           <a href="#galery">Galerie</a>
-          <a href="#testimonial">Avis</a>
+          <a href="#service">Service</a>
           <a href="#about">À propos</a>
           <a href="#contact">Contact</a>
         </nav>
@@ -74,9 +74,10 @@
         </div>
       </div>
     </header>
-
+    <!-- ! HEADER -->
     <!-- ! HERO Section -->
     <section
+      id="hero"
       class="relative bg-brand-darker/90 min-h-[calc(100vh-7rem)] w-full pt-10 sm:pt-24 sm:pb-32 pb-10 overflow-hidden"
     >
       <div class="absolute inset-0">
@@ -169,12 +170,11 @@
         </div>
       </div>
     </section>
-
     <!-- ! HERO Section -->
     <!-- ! BODY -->
     <main class="flex flex-col items-center">
       <!-- ! WHY US Section -->
-      <section class="section-light w-full py-8">
+      <section id="service" class="section-light w-full py-8">
         <div class="section-container flex flex-col gap-14">
           <div class="flex flex-col gap-2 items-center justify-center">
             <h1
@@ -224,7 +224,7 @@
       </section>
       <!-- ! WHY US Section -->
       <!-- ! ABOUT Section -->
-      <section class="bg-bg-white/90 w-full py-8">
+      <section id="about" class="bg-bg-white/90 w-full py-8">
         <div
           class="section-container flex flex-col lg:flex-row items-center gap-8"
         >
@@ -271,6 +271,84 @@
         </div>
       </section>
       <!-- ! ABOUT Section -->
+      <!-- ! PRODUCTS Section -->
+      <section id="menu" class="section-light w-full py-8">
+        <div class="section-container flex flex-col gap-14 items-center">
+          <!-- ? Section Header -->
+          <header class="flex flex-col gap-2 items-center justify-center">
+            <p
+              class="text-brand-gold tracking-[0.2em] text-sm uppercase font-semibold"
+            >
+              Nos Spécialités
+            </p>
+            <h2 class="title">Nos plats incontournables</h2>
+          </header>
+
+          <!-- ? Products Grid -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 w-full"
+          >
+            <!-- ? Product Card: Poulet DG -->
+            <article class="card">
+              <img
+                src="./asset/products/poulet.jpg"
+                alt="Poulet DG"
+                class="card-image"
+              />
+              <h3 class="card-content">Poulet DG</h3>
+              <p class="card-price">3 500 FCFA</p>
+            </article>
+
+            <!-- ? Product Card: Poisson Braissé -->
+            <article class="card">
+              <img
+                src="./asset/products/poisson.jpg"
+                alt="Poisson braissé"
+                class="card-image"
+              />
+              <h3 class="card-content">Poisson braissé</h3>
+              <p class="card-price">4 500 FCFA</p>
+            </article>
+
+            <!-- ? Product Card: Brochettes Mixtes -->
+            <article class="card">
+              <img
+                src="./asset/products/brochette.jpg"
+                alt="Brochette mixte"
+                class="card-image"
+              />
+              <h3 class="card-content">Brochettes mixtes</h3>
+              <p class="card-price">3 000 FCFA</p>
+            </article>
+
+            <!-- ? Product Card: Pizza Happy Land -->
+            <article class="card">
+              <img
+                src="./asset/products/pizza.jpg"
+                alt="Pizza Happy Land"
+                class="card-image"
+              />
+              <h3 class="card-content">Pizza Happy Land</h3>
+              <p class="card-price">4 500 FCFA</p>
+            </article>
+
+            <!-- ? Product Card: Jus Naturel -->
+            <article class="card">
+              <img
+                src="./asset/products/boisson.jpg"
+                alt="Jus Naturel"
+                class="card-image"
+              />
+              <h3 class="card-content">Jus Naturel</h3>
+              <p class="card-price">1 500 FCFA</p>
+            </article>
+          </div>
+
+          <!-- ? Call to Action -->
+          <button class="btn-secondary w-fit">Voir le menu complet</button>
+        </div>
+      </section>
+      <!-- ! PRODUCTS Section -->
     </main>
     <!-- ! BODY -->
   </body>
