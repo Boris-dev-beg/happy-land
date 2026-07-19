@@ -78,7 +78,7 @@
 
   /* ! CARTES */
   .card {
-    @apply bg-bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-gray-100;
+    @apply bg-bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-gray-100 flex flex-col items-center justify-center relative;
   }
 
   .card-image {
@@ -86,11 +86,11 @@
   }
 
   .card-content {
-    @apply p-4 text-center;
+    @apply p-2 text-center font-semibold;
   }
 
   .card-price {
-    @apply text-brand-green font-semibold mt-2;
+    @apply text-brand-green font-semibold mb-2 text-lg;
   }
 
   /* ! SECTIONS */

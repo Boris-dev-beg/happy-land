@@ -4,13 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Happy Land</title>
+    <!-- ? icons: regulars -->
     <link
       rel="stylesheet"
       href="../node_modules/@flaticon/flaticon-uicons/css/regular/rounded.css"
     />
+    <!-- ? icons: solid -->
+    <link
+      rel="stylesheet"
+      href="../node_modules/@flaticon/flaticon-uicons/css/solid/all.css"
+    />
+    <!-- ? icons: brands (whatsapp, etc) -->
+    <link
+      rel="stylesheet"
+      href="../node_modules/@flaticon/flaticon-uicons/css/brands/all.css"
+    />
     <link rel="stylesheet" href="./output.css" />
   </head>
-  <body class="max-w-screen w-screen bg-brand-olive">
+  <body class="max-w-screen w-full bg-brand-olive">
     <!-- ! HEADER -->
     <header
       class="w-full sticky top-0 z-20 bg-black/70 backdrop-blur-xl border-b border-white/10"
@@ -41,8 +52,8 @@
         >
           <a href="#hero" class="active">Accueil</a>
           <a href="#menu">Menu</a>
-          <a href="#galery">Galerie</a>
-          <a href="#testimonial">Avis</a>
+          <a href="#gallery">Galerie</a>
+          <a href="#service">Service</a>
           <a href="#about">À propos</a>
           <a href="#contact">Contact</a>
         </nav>
@@ -70,9 +81,10 @@
         </div>
       </div>
     </header>
-
+    <!-- ! HEADER -->
     <!-- ! HERO Section -->
     <section
+      id="hero"
       class="relative bg-brand-darker/90 min-h-[calc(100vh-7rem)] w-full pt-10 sm:pt-24 sm:pb-32 pb-10 overflow-hidden"
     >
       <div class="absolute inset-0">
@@ -93,7 +105,9 @@
               <i class="fi fi-rr-star"></i>
               Saveurs authentiques
             </span>
-            <h1 class="title text-4xl text-white font-semibold leading-tight">
+            <h1
+              class="title text-start text-4xl text-white font-semibold leading-tight"
+            >
               Découvrez les saveurs qui
               <span class="font-normal text-brand-gold">rassemblent</span>
             </h1>
@@ -165,7 +179,281 @@
         </div>
       </div>
     </section>
-
     <!-- ! HERO Section -->
+    <!-- ! BODY -->
+    <main class="flex flex-col items-center">
+      <!-- ! WHY US Section -->
+      <section id="service" class="section-light w-full py-8">
+        <div class="section-container flex flex-col gap-14">
+          <div class="flex flex-col gap-2 items-center justify-center">
+            <h1
+              class="text-brand-gold tracking-[0.2em] text-sm uppercase font-semibold"
+            >
+              POURQUOI NOUS CHOISIR ?
+            </h1>
+            <p class="title">Une expérience culinaire unique</p>
+          </div>
+          <div
+            class="grid-container md:*:border-r md:*:border-brand-gold-hover *:last:border-none *:px-4"
+          >
+            <div class="w-full flex flex-col items-center justify-center gap-2">
+              <i class="fi fi-rr-egg text-5xl lg:text-7xl"></i>
+              <h2 class="font-bold">Ingrédients frais</h2>
+              <p class="paragraph text-center">
+                Produits locaux et de saison, choisis chaque jour pour leur
+                fraîcheur et leur saveur.
+              </p>
+            </div>
+            <div class="w-full flex flex-col items-center justify-center gap-2">
+              <i class="fi fi-rr-restaurant text-5xl lg:text-7xl"></i>
+              <h2 class="font-bold">Chef passionné</h2>
+              <p class="paragraph text-center">
+                Une brigade créative qui revisite les classiques avec goût et
+                savoir-faire.
+              </p>
+            </div>
+            <div class="w-full flex flex-col items-center justify-center gap-2">
+              <i class="fi fi-rr-smile text-5xl lg:text-7xl"></i>
+              <h2 class="font-bold">Ambiance conviviale</h2>
+              <p class="paragraph text-center">
+                Un cadre chaleureux, idéal pour partager un repas en famille ou
+                entre amis.
+              </p>
+            </div>
+            <div class="w-full flex flex-col items-center justify-center gap-2">
+              <i class="fi fi-rr-calendar text-5xl lg:text-7xl"></i>
+              <h2 class="font-bold">Réservation facile</h2>
+              <p class="paragraph text-center">
+                Réservez en ligne ou par téléphone en quelques secondes pour
+                assurer votre table.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ! WHY US Section -->
+      <!-- ! ABOUT Section -->
+      <section id="about" class="bg-bg-white/90 w-full py-8">
+        <div
+          class="section-container flex flex-col lg:flex-row items-center gap-8"
+        >
+          <!-- ? Image -->
+          <div
+            class="relative rounded-3xl w-full lg:w-1/2 h-115 overflow-hidden"
+          >
+            <img
+              src="./asset/about.png"
+              alt="Happy Land"
+              class="object-cover w-full h-full"
+            />
+          </div>
+          <!-- ? Content -->
+          <div class="flex flex-col w-full lg:w-1/2 p-4">
+            <span class="uppercase text-sm text-brand-gold tracking-[0.2em]">
+              A PROPOS DE NOUS
+            </span>
+            <p class="title text-start">
+              Happy Land, bien plus qu'un restaurant
+            </p>
+            <p class="paragraph my-6">
+              Depuis notre ouverture, nous avons à coeur de vous offir bien plus
+              qu'un simple repas. Happy Land est un lieu de partage, de
+              convivialité et de découvertes culinaires. Notre mission est de
+              ravir vos papilles avec des plats mêlant tradition et créativité.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+              <div class="rounded-3xl bg-slate-50 p-4">
+                <h3 class="font-semibold">Partage</h3>
+                <p class="paragraph text-sm">
+                  Un cadre chaleureux pour des moments en famille ou entre amis.
+                </p>
+              </div>
+              <div class="rounded-3xl bg-slate-50 p-4">
+                <h3 class="font-semibold">Créativité</h3>
+                <p class="paragraph text-sm">
+                  Des plats qui mêlent tradition et innovations culinaires.
+                </p>
+              </div>
+            </div>
+            <button class="btn-secondary mt-4 w-max">En savoir plus</button>
+          </div>
+        </div>
+      </section>
+      <!-- ! ABOUT Section -->
+      <!-- ! PRODUCTS Section -->
+      <section id="menu" class="section-light w-full py-8">
+        <div class="section-container flex flex-col gap-14 items-center">
+          <!-- ? Section Header -->
+          <header class="flex flex-col gap-2 items-center justify-center">
+            <p
+              class="text-brand-gold tracking-[0.2em] text-sm uppercase font-semibold"
+            >
+              Nos Spécialités
+            </p>
+            <h2 class="title">Nos plats incontournables</h2>
+          </header>
+
+          <!-- ? Products Grid -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 w-full"
+          >
+            <!-- ? Product Card: Poulet DG -->
+            <article class="card">
+              <img
+                src="./asset/products/poulet.jpg"
+                alt="Poulet DG"
+                class="card-image"
+              />
+              <h3 class="card-content">Poulet DG</h3>
+              <p class="card-price">3 500 FCFA</p>
+            </article>
+
+            <!-- ? Product Card: Poisson Braissé -->
+            <article class="card">
+              <img
+                src="./asset/products/poisson.jpg"
+                alt="Poisson braissé"
+                class="card-image"
+              />
+              <h3 class="card-content">Poisson braissé</h3>
+              <p class="card-price">4 500 FCFA</p>
+            </article>
+
+            <!-- ? Product Card: Brochettes Mixtes -->
+            <article class="card">
+              <img
+                src="./asset/products/brochette.jpg"
+                alt="Brochette mixte"
+                class="card-image"
+              />
+              <h3 class="card-content">Brochettes mixtes</h3>
+              <p class="card-price">3 000 FCFA</p>
+            </article>
+
+            <!-- ? Product Card: Pizza Happy Land -->
+            <article class="card">
+              <img
+                src="./asset/products/pizza.jpg"
+                alt="Pizza Happy Land"
+                class="card-image"
+              />
+              <h3 class="card-content">Pizza Happy Land</h3>
+              <p class="card-price">4 500 FCFA</p>
+            </article>
+
+            <!-- ? Product Card: Jus Naturel -->
+            <article class="card">
+              <img
+                src="./asset/products/boisson.jpg"
+                alt="Jus Naturel"
+                class="card-image"
+              />
+              <h3 class="card-content">Jus Naturel</h3>
+              <p class="card-price">1 500 FCFA</p>
+            </article>
+          </div>
+
+          <!-- ? Call to Action -->
+          <button class="btn-secondary w-fit">Voir le menu complet</button>
+        </div>
+      </section>
+      <!-- ! PRODUCTS Section -->
+      <!-- ! GALLERY Section -->
+      <section id="gallery" class="bg-bg-white/90 w-full py-8">
+        <div class="section-container flex flex-col gap-4 items-center">
+          <!-- ? Section Header -->
+          <header class="flex flex-col gap-2 items-center justify-center">
+            <p
+              class="text-brand-gold tracking-[0.2em] text-sm uppercase font-semibold"
+            >
+              Galérie
+            </p>
+            <h2 class="title">Découvrez notre univers en images</h2>
+          </header>
+
+          <div class="relative w-full pt-16">
+            <!-- ? Boutons de navigation -->
+            <span
+              class="absolute top-0 right-10 flex gap-4 items-center justify-center z-10"
+            >
+              <button
+                id="btn-prev"
+                class="rounded-full bg-white flex items-center justify-center hover:bg-white/70 shadow p-3 pb-1 disabled:opacity-50 disabled:cursor-not-allowed transition-opacity"
+              >
+                <i class="fi fi-rr-angle-small-left text-xl"></i>
+              </button>
+              <button
+                id="btn-next"
+                class="rounded-full bg-white flex items-center justify-center hover:bg-white/70 shadow p-3 pb-1 disabled:opacity-50 disabled:cursor-not-allowed transition-opacity"
+              >
+                <i class="fi fi-rr-angle-small-right text-xl"></i>
+              </button>
+            </span>
+
+            <!-- ? Images Grid (Fill with TypeScript) -->
+            <div
+              id="gallery-grid"
+              class="grid grid-rows-1 grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 w-full relative"
+            >
+              <!-- ? Images -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ! GALLERY Section -->
+
+      <!-- ! Contact Section -->
+      <section id="contact" class="section-light w-full py-16">
+        <div class="section-container">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+            <!-- ? Contact info -->
+            <div class="flex flex-col w-full p-4">
+              <span class="uppercase text-sm text-brand-gold tracking-[0.2em]"
+                >Contactez</span
+              >
+              <p class="title text-start">Entrons en contact</p>
+              <div class="flex flex-col gap-3 mt-6">
+                <div class="flex items-start gap-3">
+                  <i class="fi fi-sr-marker text-2xl"></i>
+                  <p class="paragraph font-semibold capitalize">Boulevard êvéché, Bafoussam</p>
+                </div>
+                <div class="flex items-start gap-3">
+                  <i class="fi fi-rr-phone-flip text-2xl"></i>
+                  <p class="paragraph font-semibold">+237 694 82 73 26</p>
+                </div>
+                <div class="flex items-start gap-3">
+                  <i class="fi fi-brands-whatsapp text-2xl"></i>
+                  <p class="paragraph font-semibold">WhatsApp: +237 694 82 73 26</p>
+                </div>
+                <div class="flex items-start gap-3">
+                  <i class="fi fi-rr-envelope text-2xl"></i>
+                  <p class="paragraph font-semibold">contact@happyland.cm</p>
+                </div>
+                <div class="flex items-start gap-3">
+                  <i class="fi fi-rr-clock text-2xl"></i>
+                  <p class="paragraph font-semibold">Ouvert 24h/24 - 7j/7</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- ? Image -->
+            <div class="relative rounded-3xl h-115 overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15886.487190194975!2d10.4367916!3d5.4741976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x105f9be8448bf8bf%3A0xefc65b9a49360b42!2sHappy%20Land!5e0!3m2!1sen!2scm!4v1784456725983!5m2!1sen!2scm"
+                width="800"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                class="w-full"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- ! BODY -->
+    <script src="./index.js"></script>
   </body>
 </html>
