@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "tsc && npx @tailwindcss/cli -i ./src/global.css -o ./src/output.css",
-    "watch": "npx @tailwindcss/cli -i ./src/global.css -o ./src/output.css --watch"
+    "build": "tsc && npx @tailwindcss/cli -i ./src/global.css -o ./output.css",
+    "dev": "npx @tailwindcss/cli -i ./src/global.css -o ./src/output.css --watch"
   },
   "keywords": [],
   "type": "commonjs",
