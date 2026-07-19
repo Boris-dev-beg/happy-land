@@ -21,7 +21,7 @@
       "price": 5500
     },
     {
-      "image_url": "boisson.jpg",
+      "image_url": "jus.jpg",
       "title": "Jus Naturel",
       "price": 1500
     }
@@ -34,6 +34,7 @@
     { "src": "image5.png", "alt": "Image 5" },
     { "src": "image6.png", "alt": "Image 6" },
     { "src": "image7.png", "alt": "Image 7" },
-    { "src": "image8.png", "alt": "Image 8" }
+    { "src": "image8.png", "alt": "Image 8" },
+    { "src": "image9.jpg", "alt": "Image 8" }
   ]
 }
