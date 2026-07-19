@@ -45,7 +45,7 @@
         >
           <a href="#hero" class="active">Accueil</a>
           <a href="#menu">Menu</a>
-          <a href="#galery">Galerie</a>
+          <a href="#gallery">Galerie</a>
           <a href="#service">Service</a>
           <a href="#about">À propos</a>
           <a href="#contact">Contact</a>
@@ -349,7 +349,51 @@
         </div>
       </section>
       <!-- ! PRODUCTS Section -->
+      <!-- ! PRODUCTS Section -->
+      <section id="gallery" class="bg-bg-white/90 w-full py-8">
+        <div class="section-container flex flex-col gap-4 items-center">
+          <!-- ? Section Header -->
+          <header class="flex flex-col gap-2 items-center justify-center">
+            <p
+              class="text-brand-gold tracking-[0.2em] text-sm uppercase font-semibold"
+            >
+              Galérie
+            </p>
+            <h2 class="title">Découvrez notre univers en images</h2>
+          </header>
+
+          <div class="relative w-full pt-16">
+            <!-- ? Boutons de navigation -->
+            <span
+              class="absolute top-0 right-10 flex gap-4 items-center justify-center z-10"
+            >
+              <button
+                id="btn-prev"
+                class="rounded-full bg-white flex items-center justify-center hover:bg-white/70 shadow p-3 pb-1 disabled:opacity-50 disabled:cursor-not-allowed transition-opacity"
+              >
+                <i class="fi fi-rr-angle-small-left text-xl"></i>
+              </button>
+              <button
+                id="btn-next"
+                class="rounded-full bg-white flex items-center justify-center hover:bg-white/70 shadow p-3 pb-1 disabled:opacity-50 disabled:cursor-not-allowed transition-opacity"
+              >
+                <i class="fi fi-rr-angle-small-right text-xl"></i>
+              </button>
+            </span>
+
+            <!-- ? Images Grid (fill with TypeScript) -->
+            <div
+              id="gallery-grid"
+              class="grid grid-rows-1 grid-cols-1 md:grid-cols-2 lg:e w-full py-8"grid-cols-5 gap-6 w-full relative"
+            >
+            <!-- ? Images -->
+          </div>
+          </div>
+        </div>
+      </section>
+      <!-- ! PRODUCTS Section -->
     </main>
     <!-- ! BODY -->
+    <script src="./index.js"></script>
   </body>
 </html>
