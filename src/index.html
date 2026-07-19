@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Land</title>
+    <link
+      rel="stylesheet"
+      href="../node_modules/@flaticon/flaticon-uicons/css/regular/rounded.css"
+    />
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+  <body class="max-w-screen w-screen bg-brand-olive">
+    <!-- ! HEADER -->
+    <header
+      class="w-full sticky top-0 z-20 bg-black/70 backdrop-blur-xl border-b border-white/10"
+    >
+      <div
+        class="section-container flex flex-wrap items-center justify-between gap-4 py-4"
+      >
+        <a href="#hero" class="flex items-center gap-3 text-white no-underline">
+          <span class="relative h-11 w-11 shrink">
+            <img
+              src="./asset/chef-hat.png"
+              alt="chef hat"
+              class="h-full w-full object-contain"
+            />
+          </span>
+          <div class="flex flex-col leading-tight">
+            <h1 class="font-logo text-2xl md:text-3xl text-brand-gold">
+              Happy Land
+            </h1>
+            <span class="uppercase tracking-[0.28em] text-xs text-white/70"
+              >Restaurant</span
+            >
+          </div>
+        </a>
+
+        <nav
+          class="hidden md:flex items-center justify-center gap-5 text-white text-sm font-sans *:hover:text-brand-gold *:[&.active]:text-brand-gold"
+        >
+          <a href="#hero" class="active">Accueil</a>
+          <a href="#menu">Menu</a>
+          <a href="#galery">Galerie</a>
+          <a href="#testimonial">Avis</a>
+          <a href="#about">À propos</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <div class="hidden md:flex flex-col text-right">
+            <span class="text-xs uppercase tracking-[0.24em] text-white/60"
+              >Ouvert 7j/7</span
+            >
+            <span class="text-sm font-semibold text-white"
+              >Réservation disponible</span
+            >
+          </div>
+          <button
+            class="btn-primary text-brand-olive hidden lg:inline-flex whitespace-nowrap"
+          >
+            Réserver une table
+          </button>
+          <button
+            class="md:hidden inline-flex items-center justify-center rounded-full bg-white/10 p-3 text-white transition hover:bg-white/15"
+            aria-label="Ouvrir le menu"
+          >
+            <i class="fi fi-rr-menu-burger text-2xl"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ! HERO Section -->
+    <section
+      class="relative bg-brand-darker/90 min-h-[calc(100vh-7rem)] w-full pt-10 sm:pt-24 sm:pb-32 pb-10 overflow-hidden"
+    >
+      <div class="absolute inset-0">
+        <img
+          src="./asset/bg_banner.png"
+          class="w-full h-full object-cover opacity-40"
+          alt="Plat Happy Land"
+        />
+        <div class="absolute inset-0 bg-black/50"></div>
+      </div>
+
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-6 items-center">
+          <div class="text-white">
+            <span
+              class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.32em] text-brand-gold mb-4"
+            >
+              <i class="fi fi-rr-star"></i>
+              Saveurs authentiques
+            </span>
+            <h1 class="title text-4xl text-white font-semibold leading-tight">
+              Découvrez les saveurs qui
+              <span class="font-normal text-brand-gold">rassemblent</span>
+            </h1>
+            <p class="paragraph mt-6 text-white/90 max-w-xl">
+              Cuisine locale et internationale préparée avec passion au coeur de
+              Bafoussam. Une expérience gourmande et raffinée qui met en valeur
+              les produits du terroir.
+            </p>
+            <div class="mt-10 flex flex-col sm:flex-row sm:items-center gap-4">
+              <a
+                href="#menu"
+                class="btn-secondary inline-flex items-center justify-center gap-2"
+              >
+                <i class="fi fi-rr-restaurant-menu"></i>
+                Voir le menu
+              </a>
+              <a
+                href="#contact"
+                class="btn-primary inline-flex items-center justify-center gap-2"
+              >
+                <i class="fi fi-rr-bookmark"></i>
+                Réserver une table
+              </a>
+            </div>
+            <div class="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div
+                class="rounded-2xl bg-white/5 border border-brand-gold/20 p-5 text-white"
+              >
+                <p class="text-2xl font-semibold">4,7/5</p>
+                <p class="mt-1 text-sm text-white/70">Avis clients</p>
+              </div>
+              <div
+                class="rounded-2xl bg-white/5 border border-brand-gold/20 p-5 text-white"
+              >
+                <p class="text-2xl font-semibold">Bafoussam</p>
+                <p class="mt-1 text-sm text-white/70">Boulevard évêché</p>
+              </div>
+              <div
+                class="rounded-2xl bg-white/5 border border-brand-gold/20 p-5 text-white"
+              >
+                <p class="text-2xl font-semibold">Ouvert 24h/24</p>
+                <p class="mt-1 text-sm text-white/70">7j/7</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="relative rounded-4xl overflow-hidden border border-white/10 shadow-2xl shadow-black/30 bg-black/20 lg:block hidden"
+          >
+            <div
+              class="absolute inset-0 bg-linear-to-br from-transparent via-black/10 to-transparent"
+            ></div>
+            <div class="relative h-96 flex items-end p-8">
+              <div
+                class="w-full rounded-3xl bg-black/40 border border-white/10 p-6 backdrop-blur-sm"
+              >
+                <p class="text-sm uppercase tracking-[0.3em] text-brand-gold">
+                  Plat signature
+                </p>
+                <h2 class="mt-3 text-3xl font-semibold text-white">
+                  Parillade de saveurs
+                </h2>
+                <p class="mt-4 text-sm text-white/80">
+                  Assiette gourmande garnie de parfums épicés et d'ingrédients
+                  frais, parfaite pour partager un moment convivial.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ! HERO Section -->
+  </body>
+</html>
