@@ -1,7 +1,6 @@
 // ! 1. Imports
 import { GalleryImage, MockDatabase, Product } from "./types/types";
 
-
 // ! 2. Fonction asynchrone pour récupérer les Produits
 async function fetchProducts(): Promise<void> {
   try {
@@ -20,8 +19,7 @@ async function fetchProducts(): Promise<void> {
 
     // ? Appelle des fonctions pour afficher les élèments
     Gallery(images);
-    renderProducts(products)
-
+    renderProducts(products);
   } catch (error) {
     console.error("Impossible de charger les données backend :", error);
   }
@@ -126,3 +124,90 @@ function renderProducts(products: Product[]): void {
 
 // ! 5. Initialisation au chargement
 fetchProducts();
+
+// ! I. Fonction pour le toggle menu
+const btn_close_menu = document.getElementById(
+  "close-menu",
+) as HTMLButtonElement;
+const btn_open_menu = document.getElementById("open-menu") as HTMLButtonElement;
+const menu_container = document.getElementById("menu-container") as HTMLElement;
+
+// ? Fonction pour ouvir le menu
+function openMenu() {
+  menu_container.classList.remove("-translate-x-full");
+  menu_container.classList.add("translate-x-0");
+}
+
+// ? Fonction pour fermer le menu
+function closeMenu() {
+  menu_container.classList.remove("translate-x-0");
+  menu_container.classList.add("-translate-x-full");
+}
+
+// ? Assignation des fonctions aux boutons
+btn_open_menu.addEventListener("click", openMenu);
+btn_close_menu.addEventListener("click", closeMenu);
+
+// ! II. Fermeture du menu au click exterieur
+document.addEventListener("click", (event: MouseEvent) => {
+  const target = event.target as Node;
+  const isMenuOpen = menu_container.classList.contains("translate-x-0");
+
+  // ? Si le menu est ouvert ET qu'on ne clique pas dans le menu ET qu'on ne clique pas sur le bouton d'ouverture
+  if (
+    isMenuOpen &&
+    !menu_container.contains(target) &&
+    !btn_open_menu.contains(target)
+  ) {
+    closeMenu();
+  }
+});
+
+// ! III. Fermeture du menu au click sur un lien du menu
+// ? Récupération de TOUS les liens du menu
+const allMenuLinks = menu_container.querySelectorAll("a");
+
+// ? Récupérer TOUS les liens de navigation
+const allNavLinks = document.querySelectorAll("nav a");
+
+// allMenuLinks.forEach((link) => {
+//   link.addEventListener("click", function () {
+//     // ? On vérifie si on a cliqué sur un lien de navigation
+//     if (this.closest("nav")) {
+//       // ? On récupère la cible du lien cliqué
+//       const targetId = this.getAttribute("href");
+
+//       // ! 1. On retire la classe 'active' de TOUS les liens de navigation sur toute la page
+//       allNavLinks.forEach((navLink) => {
+//         navLink.classList.remove("active");
+//       });
+
+//       // ! 2. On ajoute la classe 'active' à TOUS les liens qui ont le même href
+//       if (targetId) {
+//         const matchingLinks = document.querySelectorAll(
+//           `nav a[href="${targetId}"]`,
+//         );
+//         matchingLinks.forEach((matchingLink) => {
+//           matchingLink.classList.add("active");
+//         });
+//       }
+//     }
+
+//     // ! 3. Fermer le menu mobile
+//     closeMenu();
+//   });
+// });
+
+allNavLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    const currhref = link.getAttribute("href");
+    allNavLinks.forEach((navLink) => {
+      if (currhref === navLink.getAttribute("href"))
+        link.classList.add("active");
+      navLink.classList.remove("active");
+    });
+
+    // link.classList.add("active")
+    closeMenu();
+  });
+});

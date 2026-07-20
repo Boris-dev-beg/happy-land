@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth scroll-pt-15">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,7 +9,6 @@
       rel="stylesheet"
       href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"
     />
-    <!-- <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'> -->
     <link
       rel="stylesheet"
       href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css"
@@ -68,13 +67,74 @@
             Réserver une table
           </button>
           <button
-            class="md:hidden inline-flex items-center justify-center rounded-full bg-white/10 p-3 text-white transition hover:bg-white/15"
-            aria-label="Ouvrir le menu"
+            class="md:hidden inline-flex items-center justify-center rounded-full bg-white/10 p-3 pb-2 text-white transition hover:bg-white/15"
+            id="open-menu"
+            aria-label="Open menu"
           >
             <i class="fi fi-rr-menu-burger text-2xl"></i>
           </button>
         </div>
       </div>
+      <!-- ! Responsive Nav Bar -->
+      <aside
+        id="menu-container"
+        class="flex md:hidden flex-col p-3 gap-5 fixed top-0 left-0 h-screen w-[93vw] bg-brand-dark/90 backdrop-blur-md transition-transform duration-300 ease-in-out -translate-x-full"
+      >
+        <!-- Le reste de votre code HTML reste identique -->
+        <div class="p-4 border-b border-gray-50/50 relative">
+          <div class="p-4 border-b border-gray-50/50 relative">
+            <a
+              href="#hero"
+              class="flex items-center gap-3 text-white no-underline"
+            >
+              <span class="relative h-13 w-13 shrink">
+                <img
+                  src="./asset/chef-hat.png"
+                  alt="chef hat"
+                  class="h-full w-full object-contain"
+                />
+              </span>
+              <div class="flex flex-col leading-tight">
+                <h1 class="font-logo text-3xl md:text-3xl text-brand-gold">
+                  Happy Land
+                </h1>
+                <span class="uppercase tracking-[0.28em] text-sm text-white/70"
+                  >Restaurant</span
+                >
+              </div>
+            </a>
+
+            <button
+              id="close-menu"
+              class="inline-flex items-center justify-center rounded-full bg-white/10 p-3 pb-2 text-white hover:bg-white/15 absolute right-2 top-2"
+            >
+              <i class="fi fi-rr-cross text-sm"></i>
+            </button>
+          </div>
+
+          <nav
+            class="flex flex-col items-start justify-center gap-1 py-5 px-6 text-white font-sans *:hover:text-brand-gold *:[&.active]:text-brand-gold *:w-1/2 *:p-2.5"
+          >
+            <a href="#hero" class="active">Accueil</a>
+            <a href="#menu">Menu</a>
+            <a href="#gallery">Galerie</a>
+            <a href="#service">Service</a>
+            <a href="#about">À propos</a>
+            <a href="#contact">Contact</a>
+          </nav>
+
+          <a
+            href="https://wa.me/237694827326?text=Bonjour%20Happy%20Land%20%F0%9F%8D%95,%0AJe%20souhaite%20commander%20un%20plat%20et%20recevoir%20vos%20suggestions."
+            class="btn-whatsapp w-fit mx-auto"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fi fi-brands-whatsapp text-lg"></i>
+            <span>Commander sur WhatsApp</span>
+          </a>
+        </div>
+      </aside>
+      <!-- ! Responsive Nav Bar -->
     </header>
     <!-- ! HEADER -->
     <!-- ! HERO Section -->
@@ -119,12 +179,22 @@
                 <i class="fi fi-rr-restaurant-menu"></i>
                 Voir le menu
               </a>
-              <a
+              <!-- <a
                 href="#contact"
                 class="btn-primary inline-flex items-center justify-center gap-2"
               >
                 <i class="fi fi-rr-bookmark"></i>
                 Réserver une table
+              </a> -->
+
+              <a
+                href="https://wa.me/237694827326?text=Bonjour%20Happy%20Land%20%F0%9F%8D%95,%0AJe%20souhaite%20commander%20un%20plat%20et%20recevoir%20vos%20suggestions."
+                class="btn-whatsapp"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fi fi-brands-whatsapp text-lg"></i>
+                <span>Commander sur WhatsApp</span>
               </a>
             </div>
             <div class="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -293,60 +363,7 @@
             id="products-grid"
             class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 w-full"
           >
-            <!-- ? Product Card: Poulet DG -->
-            <!-- <article class="card">
-              <img
-                src="./asset/products/poulet.jpg"
-                alt="Poulet DG"
-                class="card-image"
-              />
-              <h3 class="card-content">Poulet DG</h3>
-              <p class="card-price">3 500 FCFA</p>
-            </article> -->
-
-            <!-- ? Product Card: Poisson Braissé -->
-            <!-- <article class="card">
-              <img
-                src="./asset/products/poisson.jpg"
-                alt="Poisson braissé"
-                class="card-image"
-              />
-              <h3 class="card-content">Poisson braissé</h3>
-              <p class="card-price">4 500 FCFA</p>
-            </article> -->
-
-            <!-- ? Product Card: Brochettes Mixtes -->
-            <!-- <article class="card">
-              <img
-                src="./asset/products/brochette.jpg"
-                alt="Brochette mixte"
-                class="card-image"
-              />
-              <h3 class="card-content">Brochettes mixtes</h3>
-              <p class="card-price">3 000 FCFA</p>
-            </article> -->
-
-            <!-- ? Product Card: Pizza Happy Land -->
-            <!-- <article class="card">
-              <img
-                src="./asset/products/pizza.jpg"
-                alt="Pizza Happy Land"
-                class="card-image"
-              />
-              <h3 class="card-content">Pizza Happy Land</h3>
-              <p class="card-price">4 500 FCFA</p>
-            </article> -->
-
-            <!-- ? Product Card: Jus Naturel -->
-            <!-- <article class="card">
-              <img
-                src="./asset/products/boisson.jpg"
-                alt="Jus Naturel"
-                class="card-image"
-              />
-              <h3 class="card-content">Jus Naturel</h3>
-              <p class="card-price">1 500 FCFA</p>
-            </article> -->
+            <!-- ? Product Card -->
           </div>
 
           <!-- ? Call to Action -->
@@ -354,6 +371,33 @@
         </div>
       </section>
       <!-- ! PRODUCTS Section -->
+      <!-- ! CTA WhatsApp -->
+      <div
+        class="bg-linear-to-r from-white via-white to-brand-gold/5 backdrop-blur-sm border-t border-brand-gold/10 w-full py-6 px-4"
+      >
+        <div
+          class="section-container flex flex-col md:flex-row items-center justify-between gap-6"
+        >
+          <div class="flex flex-col gap-1">
+            <p class="text-lg font-semibold text-gray-900">
+              Un de ces plats vous intéresse ?
+            </p>
+            <p class="text-sm text-gray-600">
+              Commandez directement via WhatsApp
+            </p>
+          </div>
+          <a
+            href="https://wa.me/237694827326?text=Bonjour%20Happy%20Land%20%F0%9F%8D%95,%0AJe%20souhaite%20commander%20un%20plat%20et%20recevoir%20vos%20suggestions."
+            class="btn-whatsapp"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fi fi-brands-whatsapp text-lg"></i>
+            <span>Commander sur WhatsApp</span>
+          </a>
+        </div>
+      </div>
+      <!-- ! CTA WhatsApp -->
       <!-- ! GALLERY Section -->
       <section id="gallery" class="bg-bg-white/90 w-full py-8">
         <div class="section-container flex flex-col gap-4 items-center">
@@ -454,7 +498,13 @@
       <!-- ! CONTACT Section -->
     </main>
     <!-- ! BODY -->
-
+    <a
+      href="https://wa.me/237694827326?text=Bonjour%20Happy%20Land%20%F0%9F%8D%95,%0AJe%20souhaite%20commander%20un%20plat%20et%20recevoir%20vos%20suggestions."
+      class="btn-whatsapp px-5 pt-4 pb-3 text-2xl fixed z-50 bottom-5 right-5 rounded-full animate-pulse"
+      aria-label="Commander sur WhatsApp"
+    >
+      <i class="fi fi-brands-whatsapp"></i>
+    </a>
     <!-- ! FOOTER -->
     <footer class="section-dark pb-0">
       <div class="section-container">
@@ -491,6 +541,15 @@
               <i class="fi fi-brands-instagram"></i>
               <i class="fi fi-brands-whatsapp"></i>
             </span>
+            <a
+              href="https://wa.me/237694827326?text=Bonjour%20Happy%20Land%20%F0%9F%8D%95,%0AJe%20souhaite%20commander%20un%20plat%20et%20recevoir%20vos%20suggestions."
+              class="btn-whatsapp"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fi fi-brands-whatsapp text-lg"></i>
+              <span>Commander sur WhatsApp</span>
+            </a>
           </div>
           <div class="flex flex-col gap-5 items-start">
             <h1 class="font-semibold">Navigation</h1>
@@ -521,7 +580,7 @@
 
             <address class="not-italic flex flex-col gap-3">
               <div class="flex items-start gap-3">
-                <i class="fi fi-sr-marker text-2xl"></i>
+                <i class="fi fi-rr-marker text-2xl"></i>
                 <p class="text-gray-200">
                   Boulevard Évêché, Bafoussam, Cameroun
                 </p>
